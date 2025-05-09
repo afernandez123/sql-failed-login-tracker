@@ -20,4 +20,4 @@ Simple SQL-based security analytics project that tracks failed login attempts fr
 - `security_logs.db` — SQLite database version.
 
 ## 🔗 View Full Project
-[GitHub Repository](https://github.com/yourusername/sql-failed-login-tracker)
+[GitHub Repository](https://github.com/afernandez123/sql-failed-login-tracker)
