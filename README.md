@@ -11,3 +11,7 @@ This project simulates a real-world failed login analysis using SQL. It tracks l
 - Queried failed logins and grouped by IP.
 - Used `HAVING COUNT(*) >= 3` to identify brute-force indicators.
 - Results ordered to prioritize most dangerous IPs.
+
+## 📸 Screenshot
+(images/sql-failed-logins.png)
+(images/user-activity-logCSV.png)
