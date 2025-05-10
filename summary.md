@@ -4,20 +4,21 @@
 ![Category](https://img.shields.io/badge/Category-Threat_Detection-blue) 
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-## 📌 Description
-Simple SQL-based security analytics project that tracks failed login attempts from system logs.
+# Analyst Report: SQL Failed Login Tracker 🔍
 
-- Parsed `.csv` log data with usernames, IPs, and login outcomes.
-- Queried for suspicious IP addresses with high login failure counts.
-- Used `GROUP BY`, `HAVING`, and `ORDER BY` clauses for meaningful output.
+## 🧠 Executive Summary
+This analysis identifies IP addresses with a high volume of failed login attempts, suggesting potential brute-force behavior. Data was extracted and analyzed using SQL logic on sample user activity logs.
 
-## 📸 Screenshot
-![SQL Output](images/sql-failed-logins.png)
+## 📂 Dataset Overview
+- **Source**: user_activity_log.csv
+- **Fields**: timestamp, username, ip_address, action, success
+- **Imported into**: security_logs.db (SQLite)
 
-## 📁 Files
-- `user_activity_log.csv` — Sample log file.
-- `summary.md` — This documentation file.
-- `security_logs.db` — SQLite database version.
-
-## 🔗 View Full Project
-[GitHub Repository](https://github.com/afernandez123/sql-failed-login-tracker)
+## 🧪 Detection Logic
+sql
+SELECT ip_address, COUNT(*) AS attempts
+FROM user_activity
+WHERE success = 'false'
+GROUP BY ip_address
+HAVING COUNT(*) >= 3
+ORDER BY attempts DESC;
