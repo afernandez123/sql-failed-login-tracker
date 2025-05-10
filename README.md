@@ -13,5 +13,5 @@ This project simulates a real-world failed login analysis using SQL. It tracks l
 - Results ordered to prioritize most dangerous IPs.
 
 ## 📸 Screenshot
-(images/sql-failed-logins.png)
-(images/user-activity-logCSV.png)
+![SQL Output](images/sql-failed-logins.png)
+![SQL Output](images/user-activity-logCSV.png)
